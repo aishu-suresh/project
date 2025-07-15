@@ -1,23 +1,30 @@
-
-{% extends "Master/header.html" %}
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <title>User Home - Django Demo</title>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-    
-    </div>
-    <div class="col-sm-8">
-      <h2 class="text-light bg-dark p-3 text-center w-100">Admin Dashboard</h2>
-      <h3 class="text-center py-5 mb-5"><b>Home Page </b></h3>
-      
-    </div>
-    <div class="col-sm-2">
-      
-    </div>
-  </div>
-</div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
 
-{% endblock %}
+<body>
+
+    <div class="jumbotron text-center">
+        <h1 id="t">Welcome to User Home Page</h1>
+
+        <div class="menu">
+            <a href="{% url 'user_home' %}" class="btn btn-primary">Home</a>
+            <a href="" class="btn btn-primary">Profile</a>
+            <a href="{% url 'logout_view' %}" class="btn btn-danger">Logout</a>
+        </div>
+    </div>       
+
+   
+
+</body>
+
+</html>

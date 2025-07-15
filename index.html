@@ -1,25 +1,23 @@
+
+{% extends "Master/header.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+{% block content %}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
-</head>
-<body>
 
-    <div class="jumbotron text-center">
-    <h1 id="t">Welcome to Django</h1>
-    <div class="menu">
-        <a href="{% url 'index' %}" class="btn btn-success">Home</a>
-        <a href="{% url 'login' %}" class=" btn btn-success">Login</a>
-        <a href="{% url 'registration' %}" class=" btn btn-success">User Registration</a>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+    
     </div>
-</body>
-</html>
+    <div class="col-sm-8">
+      <h2 class="text-light bg-dark p-3 text-center w-100">Admin Dashboard</h2>
+      <h3 class="text-center py-5 mb-5"><b>Home Page </b></h3>
+      
+    </div>
+    <div class="col-sm-2">
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}

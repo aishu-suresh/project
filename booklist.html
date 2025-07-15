@@ -1,0 +1,49 @@
+{% extends "Master/header.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-10">
+      <h1 class="text-center py-5 mb-5"><b>List of Books</b></h1>
+
+      {% if books %}
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Description</th>
+              <th>Price</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in books %}
+              <tr>
+                <td>{{ i.bookname }}</td>
+                <td>{{ i.author }}</td>
+                <td>{{ i.description }}</td>
+                <td>{{ i.price }}</td>
+                <!-- <td>
+                 <a href="" class="btn btn-primary">Edit</a>
+                 <a href="" class="btn btn-danger mt-2">Delete</a>
+                </td> -->
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <div class="alert alert-danger">
+          <h4>No books available</h4>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+
+{% endblock %}
